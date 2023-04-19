@@ -5,26 +5,22 @@ app = Flask(__name__)
 tasks = [
     {
         "id": 1,
-        "name": "Miguel",
-        "idade":19
+        "name": "Luiz",
+        "idade":32
     },
     {
         "id": 2,
-        "name": "Gustavo",
-        "idade": 19
+        "name": "Glauber",
+        "idade": 22
     },
-    {
-        "id": 3,
-        "name": "Gabriel",
-        "idade":19
-    }
+    
 ]
 
 tasksJSON = json.dumps(tasks)
 
 @app.route('/teste', methods=['GET'])
 def hello_world():
-    return tasksJSON, 401
+    return tasksJSON, 200
 
 if __name__ == '__main__':
     app.run()
